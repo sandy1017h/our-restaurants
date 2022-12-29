@@ -1,0 +1,182 @@
+.header {
+    padding: 0px 20px;
+    padding-left: 7px;
+    color: rgb(255, 255, 255);
+    background: rgb(0, 114, 197);
+    // border-bottom: 2px solid var(--border-color);
+    div div:first-child {
+      button {
+        float: left;
+        color: white;
+        margin: 9px 0px;
+      }
+      .title {
+        float: left;
+        margin: 0;
+        letter-spacing: 1px;
+        font-size: 26px;
+        font-family: muli, sans-serif !important;
+        font-weight: 800;
+        padding: 13px 10px 10px;
+      }
+    }
+  }
+
+  @media (max-width:884px) {
+    div div:first-child {
+      .title {
+        font-size: 20px !important;
+      }
+    }
+  }
+
+  .logo img {
+    max-width: 46px;
+    width: 46px;
+    height: 46px;
+    margin: 7px;
+    float: left;
+  }
+  .menu-items {
+    font-size: 15px;
+    font-family: muli, sans-serif !important;
+    font-weight: 500;
+    color: black !important;
+    padding: 15px;
+  }
+
+  a.active {
+    border-bottom: 2px solid #1e429f;
+  }
+
+  a.active-mobile {
+    background-color: #c4c7cf;
+  }
+
+  .text-end button {
+    margin: 6px 0px;
+  }
+
+  .profile {
+    background-color: var(--header-background);
+    min-width: 200px;
+    max-width: 250px;
+  }
+
+  .profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    border: white 2px solid;
+  }
+
+  mat-icon {
+    margin-right: 5px;
+    color: white;
+  }
+
+  .example-card {
+    max-width: 400px;
+    margin: 4px;
+  }
+
+  .example-header-image {
+    background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+    background-size: cover;
+  }
+
+  .readorUnread {
+    transform: translate(3px, 0px);
+    font-size: 18px;
+  }
+
+  .remove {
+    transform: translate(3px, 25px);
+    font-size: 18px;
+    display: none;
+  }
+
+  mat-card:hover {
+    background-color: var(--content-body-bg-color);
+    cursor: pointer;
+    .readorUnread {
+      transform: translate(25px, 0px);
+    }
+    .remove {
+      display: block;
+    }
+  }
+
+  .bookmark-icon {
+    background: #e1effe;
+    border-radius: 50%;
+    color: #1e429f;
+    padding: 12px;
+    height: 48px;
+    width: 48px;
+  }
+
+  h2 {
+    font-family: muli, sans-serif !important;
+    font-weight: 600 !important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .right-menu-mobile-view {
+    max-width: 250px;
+    z-index: 99;
+    right: 0px;
+  }
+
+  .avatar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    font-size: 56px;
+    // margin-bottom: 24px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.6);
+    // box-shadow: inset 0 0 0 3px rgba(0, 0, 0, 0.38);
+  }
+
+  :host ::ng-deep app-image-preview {
+    .mat-card-image {
+      width: calc(100% + 0px);
+      margin: 0 -16px 16px -16px;
+    }
+  }
+
+  .list-img {
+    width: 45px;
+    border-radius: 50%;
+    height: 45px;
+  }
+  .btn-list-img {
+    width: 30px;
+    border-radius: 50%;
+    height: 30px;
+  }
+
+  h4 {
+    font-size: 15px !important;
+    font-family: Muli, sans-serif !important;
+    font-weight: 600 !important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #4c5b72 !important;
+  }
+
+  .title-name {
+    letter-spacing: .2px !important;
+    font-weight: normal;
+    font-family: Muli, sans-serif !important;
+    text-align: end !important;
+  }

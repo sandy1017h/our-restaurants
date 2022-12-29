@@ -1,0 +1,133 @@
+
+.button{
+    // font-family: 'Lovers Quarrel', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-size: small;
+    color: black;
+
+
+
+}
+.button:focus{
+    color:rgb(15, 15, 15);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow:0px 0px 0px 1px rgb(0, 0, 0);
+    animation: anim-shadow .3s forwards;
+}
+@keyframes anim-shadow {
+    100%{
+        box-shadow: 0px 0px 50px 20px rgba(112,111,211,0);
+    }
+
+}
+.badge1{
+    font-size:x-large;
+    margin-left: 450px;
+}
+
+.badge2{
+    font-size:x-large;
+
+    margin-left: 450px;
+}
+.badge3{
+    font-size:x-large;
+
+    margin-left: 450px;
+}
+.division1{
+    background-color: rgb(25, 135, 84);
+    
+}
+.pager{
+   
+    font-family: 'Montserrat', sans-serif;
+
+
+    font-size:x-large;
+}
+.simha{
+    font-family: 'Montserrat', sans-serif;
+    
+}
+.lion{
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 280px;
+
+}
+
+.input
+{
+    border-radius: 20px;
+    padding-left: 50px;
+}
+.akanda{
+    border-radius: 100%;
+    margin:inherit;
+    padding: 20px;
+    
+}
+.outline{
+    border-radius: 50px 50px 50px 50px !important;
+    
+
+}
+:host ::ng-deep .mat-form-field-outline-start {
+    border-radius: 50px 0 0 50px !important;
+    min-width: 50px !important;
+}
+:host ::ng-deep .mat-form-field-outline-end {
+    border-radius: 0 50px 50px 0 !important;
+}
+
+.mat-badge-content {
+    color: rgb(0, 0, 0);
+    background : white !important;
+    border: 1px solid rgb(0, 145, 29);
+    font-size:smaller;
+   
+}
+
+.style{
+background-color: green;
+font-size: 15px;
+}
+
+.height{
+    height: 20px;
+    border-radius: 20px;
+}
+.text{
+    font-size: 9px;
+    color: rgb(0, 0, 0);
+}
+.asterisk{
+color: red;
+}
+.underline{
+    color: green;
+}
+tr{
+    
+    
+    border: 1px solid black;
+}
+
+th{
+    padding: 10px;
+    background-color:rgb(25, 135, 84);
+    color: white;
+}
+.listname{
+    border-radius:   20px 20px 20px 20px;
+    width: 700px;
+}
+.number1{
+    width: 500px;
+}
+.bn46 {
+    width: 150px;
+    height: 50px;
+  }
+

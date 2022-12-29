@@ -1,0 +1,28 @@
+.main_content {
+    width: 100%;
+    height: calc(104.2vh - 79px);
+    // background-color: var(--content-body-bg-color);
+    background-color: white;
+    overflow-x: hidden !important;
+  }
+
+  mat-sidenav {
+    background: rgb(0, 114, 197);
+    color: white;
+  }
+
+  :host ::ng-deep {
+    .mat-drawer.mat-drawer-side {
+      z-index: 2;
+    }
+  }
+
+  .sidenav-styles{
+    border-radius: 20px;
+    padding: 0px;
+    margin-left: 3px;
+    margin-top: 3px;
+    margin-bottom: 30px;
+
+}
+

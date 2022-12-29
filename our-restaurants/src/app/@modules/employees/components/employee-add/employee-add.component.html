@@ -1,0 +1,209 @@
+<div class="row border-bottom">
+    <div class="col-4 text-end">
+        <p class="heading">ADD EMPLOYEE</p>
+    </div>
+    <div class="col-3 pb-3 text-end">
+        <button mat-raised-button class="savebutton" (click)="onclicksaveFN()">save</button>
+    </div>
+    <div class="col-5 pb-3 text-center">
+         <button mat-mini-fab color="warn">
+            <mat-icon  (click)="onclickclose()">close</mat-icon>
+        </button> </div>
+</div>
+
+<!----------------------------------------  **************   DIV ENDS   *************** -------------------------------------------> 
+ <div class="row justify-content-center row1 pt-1 scrol" >
+    <div class="col-6 formwidth pt-3 " [formGroup]="employeeaddformgroup">
+        <div class="row justify-content-center ">
+            <div class="col-6 text-center border ">
+                <img class="img" src="../../../../../assets/images/image_add.png">
+                <div class="col-12 text-end ">
+                    <button mat-mini-fab color="accent">
+                    <mat-icon>add_a_photo</mat-icon></button>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-2">
+            <div class="col-4">
+                <b class="b">*</b>
+                <mat-label>Last name</mat-label>
+                <mat-form-field appearance="outline" class="w-100">
+                    <input matInput  formControlName="lastname"  placeholder="last name"/>
+                </mat-form-field>
+            </div>
+            <div class="col-4">
+                <b class="b">*</b>
+                <mat-label>First name</mat-label>
+                <mat-form-field appearance="outline" class="w-100">
+                    <input matInput formControlName="firstname" placeholder="first name">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-2">
+                <mat-label>Date Of Birth</mat-label>
+                <mat-form-field appearance="outline" class="w-100">
+                    <input matInput formControlName="dateofbirth" [matDatepicker]="picker">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-2 me-1">
+                <mat-label>Marriage Date</mat-label>
+                <mat-form-field appearance="outline" class="w-100">
+                    <input matInput formControlName="marriagedate" [matDatepicker]="picker1">
+                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-4 justify-content-center">
+                <mat-label>Enter your password</mat-label>
+                <mat-form-field appearance="outline" class="w-100">
+                    <input matInput formControlName="password"  [type]="hide ? 'password' : 'text'">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <mat-label>Branch Name</mat-label>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-select formControlName="branchname">
+                        <mat-option value="one">CSE</mat-option>
+                        <mat-option value="two">ECE</mat-option>
+                        <mat-option value="three">IT</mat-option>
+                        <mat-option value="four">CIVIL</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col-4">
+                <mat-label>Designation</mat-label>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-select formControlName="designation">
+                        <mat-option value="1">DEVELOPER</mat-option>
+                        <mat-option value="2">TESTER</mat-option>
+                        <mat-option value="3">HR</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <b class="b">*</b>
+                <mat-label>Primary Mobile Number</mat-label>
+                <mat-form-field appearance="outline" class="w-100">
+                    <input matInput formControlName="primarymobilenumber"   placeholder="Primary Mobile Number">
+                </mat-form-field>
+            </div>
+            <div class="col-4">
+                <b class="b">*</b>
+                <mat-label>Secoundry Mobile Number</mat-label>
+                <mat-form-field appearance="outline" class="w-100">
+                    <input matInput formControlName="secondarymobilenumber" placeholder="Secoundry Mobile Number">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <b class="b">*</b>
+                <mat-label>Primary Email Address</mat-label>
+                <mat-form-field appearance="outline" class="w-100">
+                    <input matInput formControlName="primaryemail" placeholder="Primary Email">
+                </mat-form-field>
+            </div>
+            <div class="col-4">
+                <b class="b">*</b>
+                <mat-label>Secoundry Email Address</mat-label>
+                <mat-form-field appearance="outline" class="w-100">
+                    <input matInput formControlName="secondaryemail" placeholder="Secoundry Email">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <mat-expansion-panel hideToggle>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Address Details
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="row justify-content-center">
+                        <div class="col-6">
+                            <mat-label>DOOR NO:</mat-label>
+                            <mat-form-field appearance="outline" class="w-100">
+                                <input matInput formControlName="doororflatnumber" placeholder="door or flat number">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-6">
+                            <mat-label>
+                                <mat-label>Building Name</mat-label>
+                                <mat-form-field appearance="outline" class="w-100">
+                                    <input matInput formControlName="buildingname" placeholder="Building Name">
+                                </mat-form-field>
+                            </mat-label>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-6">
+                            <mat-label>Street</mat-label>
+                            <mat-form-field appearance="outline" class="w-100">
+                                <input matInput formControlName="street" placeholder="Street">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-6">
+                            <!-- <mat-label> -->
+                                <mat-label>Locality</mat-label>
+                                <mat-form-field appearance="outline" class="w-100">
+                                    <input matInput formControlName="locality" placeholder="Locality/Landmark">
+                                </mat-form-field>
+                            <!-- </mat-lbel> -->
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-6">
+                            <mat-label>City</mat-label>
+                            <mat-form-field appearance="outline" class="w-100">
+                                <input matInput formControlName="city" placeholder="City">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-3">
+                            <mat-label>
+                                <mat-label>State</mat-label>
+                                <mat-form-field appearance="outline" class="w-100">
+                                    <input matInput formControlName="state" placeholder="State">
+                                </mat-form-field>
+                            </mat-label>
+                        </div>
+                        <div class="col-3">
+                            <mat-label>
+                                <mat-label>Zip</mat-label>
+                                <mat-form-field appearance="outline" class="w-100">
+                                    <input matInput formControlName="zip" placeholder="Zip">
+                                </mat-form-field>
+                            </mat-label>
+                        </div>
+                    </div>
+                </mat-expansion-panel>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <mat-label>Comments</mat-label>
+                <mat-form-field appearance="outline" class="w-100">
+                    <textarea matInput formControlName="comments"></textarea>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-2">
+                <button class="button" mat-raised-button>DELETE</button>
+            </div>
+            <div class="col-2">
+                <button class="button" mat-raised-button>SAVE</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,408 @@
+<div class="container-fulid">
+    <div class="row justify-content-center">
+      <mat-toolbar class="color1">
+         <div class="col-6 text-center">
+             <span>Add Branches</span>
+         </div>
+         <div class="col-2 text-end">
+              <button mat-raised-button color="primary" (click)="onclicksaveFN()">save</button>
+         </div>
+         <div class="col-1 text-end">
+             <mat-icon (click)="onclickclose()">close</mat-icon>
+         </div>
+       </mat-toolbar>
+     </div>
+    </div>
+   <div class="row justify-content-center style2">
+     <div class="col-md-8 text-center back1 scroll" [formGroup]="branchesaddformgroup" >
+         <div class="row justify-content-center">
+             <div class="col-md-4 mt-2 text-center back ">
+                 <div class="row text-">Upload Branch Image</div>
+             <img class="style" src="../../../../assets/images/image_add.png">
+             <div class="col-12 text-end">
+                 <mat-icon>add_a_photo</mat-icon>
+             </div>
+         </div>
+         </div>
+         <div class="row justify-content-center">
+             <div class="col-md-5 ">
+            <mat-label class="first">branch name</mat-label>
+            <mat-form-field appearance="outline" class="w-100">
+            <input matInput formControlName="branchname" placeholder="branch name"/>
+            </mat-form-field>
+             </div>
+             <div class="col-md-5 ">
+                 <mat-label class="first">GST Number</mat-label>
+                 <mat-form-field appearance="outline" class="w-100">
+                 <input matInput  formControlName="gstnumber" placeholder="enter gst Number"/>
+                 </mat-form-field>
+             </div>
+         </div>
+         <div class="row justify-content-center">
+             <div class="col-md-5 ">
+            <mat-label class="first">primary mobile no</mat-label>
+            <mat-form-field appearance="outline" class="w-100">
+            <input matInput formControlName="primarymobileno" placeholder="primary mobile no"/>
+            </mat-form-field>
+             </div>
+             <div class="col-md-5">
+                 <mat-label class="first">secondary mobile no</mat-label>
+                 <mat-form-field appearance="outline" class="w-100">
+                 <input matInput formControlName="secondarymobileno" placeholder="secondary mobile no"/>
+                 </mat-form-field>
+             </div>
+         </div>
+         <div class="row justify-content-center">
+             <div class="col-md-5">
+            <mat-label class="first">primary email address</mat-label>
+            <mat-form-field appearance="outline" class="w-100">
+            <input matInput formControlName="primaryemailaddress" placeholder="primary email"/>
+            </mat-form-field>
+             </div>
+             <div class="col-md-5">
+                 <mat-label class="first">secondary email address</mat-label>
+                 <mat-form-field appearance="outline" class="w-100">
+                 <input matInput formControlName="secondaryemailaddress" placeholder="secondary email"/>
+                 </mat-form-field>
+             </div>
+         </div>
+         <div class="row justify-content-center">
+             <div class="col-8">
+             <mat-checkbox class="first">Disable online booking</mat-checkbox>
+         </div>
+         </div>
+         <div class="row justify-content-center">
+             <div class="col-md-10">
+                 <mat-expansion-panel>
+                     <mat-expansion-panel-header class="style1">
+                         branch location
+                     </mat-expansion-panel-header>
+                     <div class="row justify-content-center">
+                     <div class="col-md-12">
+                         <mat-label class="first">pin your location</mat-label>
+                         
+                         <mat-form-field appearance="outline" class="w-100">
+                         <input matInput formControlName="pinyourlocation" placeholder="search here"/>
+                          <mat-icon matSuffix>search</mat-icon>
+                          </mat-form-field>
+                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.9386843837165!2d80.61535981536392!3d16.47864213271149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35f1db96c7a031%3A0x3f0decf2ab50fd02!2sOUR%20ZONE%20%7C%20Play%20Area%20-%20Turf%20Cricket%2C%20Badminton%2C%20Foot%20Ball%2C%20Fine%20dine%20Restaurant%2C%20Function%20Hall!5e0!3m2!1sen!2sin!4v1666095310906!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     </div>
+                 </div>
+                 <div class="row justify-content-center">
+                     <div class="col-md-6  ">
+                    <mat-label class="first">locality</mat-label>
+                    <mat-form-field appearance="outline" class="w-100">
+                    <input matInput formControlName="loclity" placeholder="locality"/>
+                    </mat-form-field>
+                     </div>
+                     <div class="col-md-6">
+                         <mat-label class="first">City</mat-label>
+                         <mat-form-field appearance="outline" class="w-100">
+                         <input matInput formControlName="city" placeholder="city"/>
+                         </mat-form-field>
+                     </div>
+                 </div>
+                 <div class="row justify-content-center">
+                     <div class="col-md-6  ">
+                    <mat-label class="first">state</mat-label>
+                    <mat-form-field appearance="outline" class="w-100">
+                    <input matInput formControlName="state" placeholder="state"/>
+                    </mat-form-field>
+                     </div>
+                     <div class="col-md-6">
+                         <mat-label class="first">Street/Place</mat-label>
+                         <mat-form-field appearance="outline" class="w-100">
+                         <input matInput formControlName="street" placeholder="main road"/>
+                         </mat-form-field>
+                     </div>
+                 </div>
+                 <div class="row justify-content-center">
+                     <div class="col-md-6  ">
+                    <mat-label class="first">district</mat-label>
+                    <mat-form-field appearance="outline" class="w-100">
+                    <input matInput formControlName="district" placeholder="district"/>
+                    </mat-form-field>
+                     </div>
+                     <div class="col-md-3">
+                         <mat-label class="first">Country</mat-label>
+                         <mat-form-field appearance="outline" class="w-100">
+                         <input matInput formControlName="country" placeholder="country"/>
+                         </mat-form-field>
+                     </div>
+                     <div class="col-md-3">
+                         <mat-label class="first">zip</mat-label>
+                         <mat-form-field appearance="outline" class="w-100">
+                         <input matInput formControlName="zip" placeholder="zip"/>
+                         </mat-form-field>
+                     </div>
+                 </div>
+               </mat-expansion-panel>
+             </div>
+         </div>
+           <div class="row justify-content-center mt-2">
+             <div class="col-md-10">
+                 <mat-expansion-panel >
+                     <mat-expansion-panel-header class="style1">
+                        branch working hours
+                         </mat-expansion-panel-header>
+                     <div class="row">
+                         <div class="col-3 ">
+                        <p>monday</p>
+                         </div>
+                         <div class="col-3 ">
+                             <mat-radio-button >Open</mat-radio-button>
+                              </div>
+                         <div class="col-3 ">
+                             <mat-radio-button >close</mat-radio-button>
+                         </div>
+                         <div class="col-6 ">
+                             <mat-form-field appearance="outline" class="w-100">
+                                 <select matNativeControl required formControlName="weektime1">
+                                     <option value="1"></option>
+                                     <option value="2"></option>
+                                 </select>
+                                 </mat-form-field>
+                         </div>
+                         <div class="col-6 ">
+                             <mat-form-field appearance="outline" class="w-100">
+                                 <select matNativeControl required formControlName="weektime2">
+                                     <option value="1"></option>
+                                     <option value="2"></option>
+                                 </select>
+                                 </mat-form-field>
+                         </div>
+                     </div>
+                     <div class="row">
+                         <div class="col-3">
+                        <p>tuesday</p>
+                         </div>
+                         <div class="col-3">
+                             <mat-radio-button >Open</mat-radio-button>
+                              </div>
+                         <div class="col-3">
+                             <mat-radio-button >close</mat-radio-button>
+                         </div>
+                         <div class="col-6">
+                             <mat-form-field appearance="outline" class="w-100">
+                                 <select matNativeControl required formControlName="weektime3">
+                                     <option value="1"></option>
+                                     <option value="2"></option>
+                                 </select>
+                                 </mat-form-field>
+                         </div>
+
+                        <div class="col-6">
+                             <mat-form-field appearance="outline" class="w-100">
+                                 <select matNativeControl required formControlName="weektime4">
+                                     <option value="1"></option>
+                                     <option value="2"></option>
+                                 </select>
+                                 </mat-form-field>
+                        </div>
+                     </div>
+                     <div class="row">
+                         <div class="col-3">
+                        <p>wednesday</p>
+                         </div>
+                         <div class="col-3">
+                             <mat-radio-button >Open</mat-radio-button>
+                              </div>
+                         <div class="col-3">
+                             <mat-radio-button >close</mat-radio-button>
+                         </div>
+                         <div class="col-6">
+                             <mat-form-field appearance="outline" class="w-100">
+                                 <select matNativeControl required formControlName="weektime5">
+                                     <option value="1"></option>
+                                     <option value="2"></option>
+                                 </select>
+                                 </mat-form-field>
+                         </div>
+                         <div class="col-6">
+                             <mat-form-field appearance="outline" class="w-100">
+                                 <select matNativeControl required formControlName="weektime6">
+                                     <option value="1"></option>
+                                     <option value="2"></option>
+                                 </select>
+                                 </mat-form-field>
+                         </div>
+                     </div>
+                     <div class="row">
+                         <div class="col-3">
+                        <p>thursday</p>
+                         </div>
+                         <div class="col-3">
+                             <mat-radio-button >Open</mat-radio-button>
+                              </div>
+                         <div class="col-3">
+                             <mat-radio-button >close</mat-radio-button>
+                         </div>
+                         <div class="col-6">
+                             <mat-form-field appearance="outline" class="w-100">
+                                 <select matNativeControl required formControlName="weektime7">
+                                     <option value="1"></option>
+                                     <option value="2"></option>
+                                 </select>
+                                 </mat-form-field>
+                         </div>
+                         <div class="col-6">
+                             <mat-form-field appearance="outline" class="w-100">
+                                 <select matNativeControl required formControlName="weektime8">
+                                     <option value="1"></option>
+                                     <option value="2"></option>
+                                 </select>
+                                 </mat-form-field>
+                         </div>
+                     </div>
+                     <div class="row">
+                         <div class="col-3">
+                        <p>friday</p>
+                         </div>
+                         <div class="col-3">
+                             <mat-radio-button >Open</mat-radio-button>
+                              </div>
+                         <div class="col-3">
+                             <mat-radio-button >close</mat-radio-button>
+                         </div>
+                         <div class="col-6">
+                             <mat-form-field appearance="outline" class="w-100">
+                                 <select matNativeControl required formControlName="weektime9">
+                                     <option value="1"></option>
+                                     <option value="2"></option>
+                                 </select>
+                                 </mat-form-field>
+                         </div>
+                         <div class="col-6">
+                             <mat-form-field appearance="outline" class="w-100">
+                                 <select matNativeControl required formControlName="weektime10">
+                                     <option value="1"></option>
+                                     <option value="2"></option>
+                                 </select>
+                                 </mat-form-field>
+                         </div>
+                     </div>
+                     <div class="row">
+                         <div class="col-3">
+                        <p>saturday</p>
+                         </div>
+                         <div class="col-3">
+                             <mat-radio-button >Open</mat-radio-button>
+                              </div>
+                         <div class="col-3">
+                             <mat-radio-button >close</mat-radio-button>
+                         </div>
+                         <div class="col-6">
+                             <mat-form-field appearance="outline" class="w-100">
+                                 <select matNativeControl required formControlName="weektime11">
+                                     <option value="1"></option>
+                                     <option value="2"></option>
+                                 </select>
+                                 </mat-form-field>
+                         </div>
+
+                        <div class="col-6">
+                             <mat-form-field appearance="outline" class="w-100">
+                                 <select matNativeControl required formControlName="weektime12">
+                                     <option value="1"></option>
+                                     <option value="2"></option>
+                                 </select>
+                                 </mat-form-field>
+                         </div>
+                     </div>
+                     <div class="row">
+                         <div class="col-3">
+                        <p>sunday</p>
+                         </div>
+                         <div class="col-3">
+                             <mat-radio-button >Open</mat-radio-button>
+                              </div>
+                         <div class="col-3">
+                             <mat-radio-button >close</mat-radio-button>
+                         </div>
+                         <div class="col-6">
+                             <mat-form-field appearance="outline" class="w-100">
+                                 <select matNativeControl required formControlName="weektime13">
+                                     <option value="1"></option>
+                                     <option value="2"></option>
+                                 </select>
+                                 </mat-form-field>
+                         </div>
+                         <div class="col-6">
+                             <mat-form-field appearance="outline" class="w-100">
+                                 <select matNativeControl required formControlName="weektime14">
+                                     <option value="1"></option>
+                                     <option value="2"></option>
+                                 </select>
+                                 </mat-form-field>
+                         </div>
+                     </div>
+                 </mat-expansion-panel>
+             </div>
+           </div>
+           <div class="row justify-content-center mt-2">
+              <div class="col-md-10">
+                 <mat-expansion-panel >
+                     <mat-expansion-panel-header class="style1">
+                         Hygiene & Aminites
+                         </mat-expansion-panel-header>
+                     <div class="row justify-content-center">
+                         <div class="col-md-6">
+                             <mat-label class="first">select Hygiene precautions</mat-label>
+                             <mat-form-field appearance="outline" class="w-100">
+                                 <select matNativeControl required formControlName="hygieneprecautions">
+                                     <option value="1"></option>
+                                     <option value="2"></option>
+                                 </select>
+                             </mat-form-field>
+                         </div>
+                         <div class="col-md-6">
+                           <mat-label class="first">select aminites on your Branches</mat-label>
+                         <mat-form-field appearance="outline" class="w-100">
+                             <select matNativeControl required formControlName="aminitesonyourbranch">
+                                 <option value="1"></option>
+                                 <option value="2"></option>
+                             </select>
+                         </mat-form-field>
+                         </div>
+                     </div>
+                 </mat-expansion-panel>
+              </div>
+           </div>
+           <div class="row justify-content-center mt-2">
+              <div class="col-md-10">
+                 <mat-expansion-panel >
+                     <mat-expansion-panel-header class="style1">
+                       About Branches
+                     </mat-expansion-panel-header>
+                        <div class="row justify-content-center">
+                         <div class="col-12">
+                             <mat-form-field appearance="outline" class="w-100">
+                                 <mat-label>comments</mat-label>
+                                  <input matInput formControlName="comments" >
+                             </mat-form-field>
+                         </div>
+                        </div>
+                 </mat-expansion-panel>
+              </div>
+           </div>
+           <div class="row justify-content-center mt-2">
+             <div class="col-md-10">
+                 <mat-expansion-panel>
+                     <mat-expansion-panel-header class="style1">
+                       <span>Branches logo</span>
+                     </mat-expansion-panel-header>
+                     <img  class="logo" src="../../../../assets/images/logo.png">
+                 </mat-expansion-panel>
+             </div>
+           </div>
+           <div class="row justify-content-center mt-2">
+             <div class="col-md-2">
+                 <button mat-raised-button>dismiss</button>
+             </div>
+              <div class="col-md-2">
+                 <button mat-raised-button>save</button>
+              </div>
+           </div>
+     </div>
+   </div>
+   

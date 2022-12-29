@@ -1,0 +1,99 @@
+<div class="row justify-content-center">
+    <div class="col-7">
+<b class="homedelivery">Home Delivery</b>
+    </div>
+    <div class="col-2 ">
+
+<button mat-mini-fab color="warn">
+                <mat-icon >close</mat-icon></button>
+    </div>
+</div>
+ <hr>
+
+ <div class="row justify-content-center">
+     <div class="col-8">
+        <p class="customerdetails">Customer Details</p>
+     </div>
+    
+        <div class="row justify-content-center" [formGroup]="homedeliveryformgroup">
+            <div class="col-4">
+                <mat-label>#Mobile</mat-label>
+                <mat-form-field appearance="outline" class="w-100">
+                    <input matInput  formControlName="mobile"  placeholder="entermobilenumber">
+                </mat-form-field>
+            </div>
+            <div class="col-2">
+                <mat-label>FirstName</mat-label>
+                <mat-form-field appearance="outline" class="w-100">
+                    <input matInput formControlName="firstname" placeholder="firstname">
+                </mat-form-field>
+            </div>
+            <div class="col-2">
+                <mat-label>LastName</mat-label>
+                <mat-form-field appearance="outline" class="w-100">
+                    <input matInput formControlName="lastname" placeholder="lastname">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row justify-content-center" [formGroup]="homedeliveryformgroup">
+            <div class="col-2">
+              <mat-label>DOB</mat-label>
+              <mat-form-field class="picker field" appearance="outline" class="w-100">
+                <input matInput formControlName="dob" [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+            </div>
+            <div class="col-2">
+                <mat-label>MarrageDate</mat-label>
+                <mat-form-field class="picker1 field"  appearance="outline" class="w-100">
+                    <input matInput formControlName="mdate" [matDatepicker]="picker">
+                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-4">
+                <mat-label>Door</mat-label>
+                <mat-form-field appearance="outline" class="w-100">
+                    <input matInput formControlName="door" placeholder="doorORflat">
+                </mat-form-field>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <mat-label>BuildingName</mat-label>
+                    <mat-form-field appearance="outline" class="w-100">
+                        <input matInput formControlName="buildingname" placeholder="enterbuildingname">
+                    </mat-form-field>
+                </div>
+                <div class="col-4">
+                    <mat-label>Street</mat-label>
+                    <mat-form-field appearance="outline" class="w-100">
+                        <input matInput formControlName="street" placeholder="enterstreetname">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <mat-label>Locality</mat-label>
+                    <mat-form-field appearance="outline" class="w-100">
+                        <input matInput formControlName="locality" placeholder="locality">
+                    </mat-form-field>
+                </div>
+                <div class="col-4">
+                    <mat-label>City</mat-label>
+                    <mat-form-field appearance="outline" class="w-100">
+                        <input matInput formControlName="city" placeholder="city">
+                    </mat-form-field>
+                </div>
+                <div class="row ">
+                    <div class="col-10 text-end">
+                        <button mat-raised-button class="continue">Continue----></button>
+                    </div>
+                </div>
+
+            </div>
+    
+       
+
+        </div>

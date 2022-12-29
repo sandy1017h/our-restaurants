@@ -1,0 +1,147 @@
+<div class="row container-fluid">
+    <div class="row row-style ">
+        <div class="col-2">
+        <mat-form-field appearance="outline" class="w-100 form">
+          <input matInput type="text" placeholder="SEARCH" />
+          <mat-icon matPrefix class="pt-0">search</mat-icon>
+        </mat-form-field>
+        </div>
+        <div class="col-2 mt-2 refresh1 ">
+          <button class="w-100 add " mat-raised-button color="primary" (click)="onclickopenaddbranches()">ADD BRANCHES</button>
+        </div>
+        <div class="col-2 mt-2 refresh1 ">
+            <mat-icon > refresh</mat-icon>
+        </div>
+    </div>
+    <div class="row cardd mt-2">
+        <div class="col-md-6 col-lg-4  col-xl-2 col-1 style"  *ngFor="let link of mat">
+            <mat-card>
+               <div class="row">
+                <img class="image1" src="../../../../assets/images/image_add.png">
+               </div>
+               <div class="row">
+                <div class="col-1"></div>
+                <div class="col-4">
+                    <div class="back" ><b>{{link.name1}}</b></div>
+                </div>
+                <div class="col-4"></div>
+                <div class="col-1">
+                    <mat-icon class="back" (click)="onclickopeneditbranches()">edit</mat-icon>
+                </div>
+                <div class="col-1">
+                    <mat-icon class="back1">delete</mat-icon>
+                </div>
+               </div>
+               <hr>
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon class="back">room</mat-icon>
+                    </div>
+                    <div class="col-8">
+                        <span>{{link.name2}}</span>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-2">
+                        <mat-icon class="back">phone</mat-icon>
+                    </div>
+                    <div class="col-8">
+                        <span>{{link.phone}}</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon class="back">email</mat-icon>
+                    </div>
+                    <div class="col-8">
+                        <span>{{link.email}}</span>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-2">
+                        <mat-icon class="back">event</mat-icon>
+                    </div>
+                    <div class="col-3">
+                        <span>monday</span>
+                    </div>
+                    <div class="col-7">
+                        <span>12:00am-12:00pm</span>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-2">
+                    </div>
+                    <div class="col-3">
+                        <span>tuesday</span>
+                    </div>
+                    <div class="col-7">
+                        <span>12:00am-12:00pm</span>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-2">
+                    </div>
+                    <div class="col-3">
+                        <span class="weddy">wednesday</span>
+                    </div>
+                    <div class="col-7">
+                        <span>12:00am-12:00pm</span>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-2">
+                    </div>
+                    <div class="col-3">
+                        <span>thursday</span>
+                    </div>
+                    <div class="col-7">
+                        <span>12:00am-12:00pm</span>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-2">
+                    </div>
+                    <div class="col-3">
+                        <span>friday</span>
+                    </div>
+                    <div class="col-7">
+                        <span>12:00am-12:00pm</span>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-2">
+                    </div>
+                    <div class="col-3">
+                        <span>saturday</span>
+                    </div>
+                    <div class="col-7">
+                        <span>12:00am-12:00pm</span>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-2">
+                    </div>
+                    <div class="col-3">
+                        <span>sunday</span>
+                    </div>
+                    <div class="col-7">
+                        <span>12:00am-12:00pm</span>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-2">
+                        <mat-icon class="back">work_outline</mat-icon>
+                    </div>
+                    <div class="col-3"><span>hygiene </span></div>
+                    <div class="col-1">
+                        <span><mat-icon class="back">qr_code_scanner</mat-icon></span>
+                    </div>
+                    <div class="col-5">
+                        <span>  online ticket booking
+                        </span>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+    </div>

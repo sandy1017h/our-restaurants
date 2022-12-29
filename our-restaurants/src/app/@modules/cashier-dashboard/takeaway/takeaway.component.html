@@ -1,0 +1,80 @@
+<div class="row">
+ <div class="row border-bottom">
+        <div class="col-md-5 col-lg-2 col-xl-3 col-sm-1 text-end">
+            <h2>Take Away</h2>
+        </div> 
+            <div class="col-md-3 col-lg-1 col-xl-3 col-sm-1">
+        <mat-form-field appearance="outline" class="w-100">
+            <mat-icon matPrefix>search</mat-icon>
+            <input matInput placeholder="searchMenuItems">
+        </mat-form-field>
+    </div>
+     <div class="col-md-3 col-lg-1 col-xl-3 col-sm-1 mt-2">
+            <button mat-raised-button color="primary"> <mat-icon matPrefix>search</mat-icon>category</button>
+        </div>
+        <div class="col-md-2 col-lg-2 col-xl-3 col-sm-1  text-end">
+             <button mat-mini-fab color="warn">
+                <mat-icon >close</mat-icon>
+            </button> </div>
+    </div>
+</div>
+
+<div class="row mt-5 justify-content-center">
+    <div class="col-md-6 col-lg-5 col-xl-7">
+    <mat-expansion-panel >
+    <mat-expansion-panel-header class="panel" >
+      <mat-panel-title>
+        Recommended Items
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+ <div class="row mt-2 ">
+    <div class="col-2 mb-2" *ngFor="let value of takeawayy">
+        <mat-card class="takecard over">
+            <div class="row text-center">
+                <h1>Veg1</h1>
+            </div>
+             <hr>
+            <div class="row">
+                <div class="col-3"><button mat-mini-fab class="remove"><mat-icon>remove</mat-icon></button>
+                </div>
+                <div class="col-3">
+                 <p class="one">1</p>
+                </div>
+                <div class="col-3">
+                    <button mat-mini-fab class="add"><mat-icon>add</mat-icon></button>
+                </div>
+                <div class="col-2">
+                    <h2 class="sticky">169</h2>
+                </div>
+            </div>
+
+         </mat-card>
+    </div>
+ </div>
+  </mat-expansion-panel>
+</div>
+</div>
+
+<div class="row mt-2 justify-content-center">
+    <div class="col-md-6 col-lg-5 col-xl-7 ">
+    <mat-expansion-panel  >
+    <mat-expansion-panel-header class="panel">
+      <mat-panel-title>
+      Veg
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+</mat-expansion-panel>
+</div>
+</div>
+
+<div class="row mt-2 justify-content-center">
+    <div class="col-md-6 col-lg-5 col-xl-7 ">
+    <mat-expansion-panel >
+    <mat-expansion-panel-header class="panel">
+      <mat-panel-title>
+      Non-Veg
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+</mat-expansion-panel>
+</div>
+</div>

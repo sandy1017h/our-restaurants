@@ -1,0 +1,322 @@
+<div class="row container-fluid">
+  <div class="col-3 mt-5  division1">
+    <span><button class="w-100 btn btn-success button text-start " (click)="onclick(1)">Employee compensation policy</button>  <span matBadge="1" matBadgeOverlap=" false" matBadgeSize="large"></span></span>
+    <span><button class="w-100 btn btn-success button text-start" (click)="onclick(2)">Bussiness Details</button><span matBadge="2" matBadgeOverlap=" false " matBadgeSize="large"></span></span>
+    <span><button class="w-100 btn btn-success button text-start" (click)="onclick(3)">Workers Details </button><span matBadge="3" matBadgeOverlap=" false "matBadgeSize="large"></span></span>
+    <span><button class="w-100 btn btn-success button text-start" (click)="onclick(4)">Exclusion</button><span matBadge="4" matBadgeOverlap=" false" matBadgeSize="large"></span></span>
+    <span><button class="w-100 btn btn-success button text-start" (click)="onclick(5)">Condition</button><span matBadge="5" matBadgeOverlap=" false "matBadgeSize="large" ></span></span>
+     </div>
+
+     <div class="col-7 mt-5">
+    <div *ngIf="isElement === 1" [formGroup]="page1formgroup">
+      <div class="row justify-content-center">
+        <h1>Miscellaneous:Employee Compensation Insurance Policy</h1>
+        <div class="col-6">
+           <mat-label>Policy Start Date<b class="asterisk">*</b></mat-label>
+           <mat-form-field appearance="outline" class="w-100">
+               <input matInput formControlName="policystart" [matDatepicker]="picker1">
+               <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+               <mat-datepicker #picker1></mat-datepicker>
+             </mat-form-field>
+        </div>
+        <div class="col-6">
+           <mat-label>Policy End Date<b class="asterisk">*</b></mat-label>
+           <mat-form-field appearance="outline" class="w-100">
+               <input matInput formControlName="policyend" [matDatepicker]="picker2">
+               <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+               <mat-datepicker #picker2></mat-datepicker>
+             </mat-form-field>
+        </div>
+   </div>
+   <div class="row justify-content-center">
+       <div class="col-6">
+           <mat-label>Policy Start Time
+           </mat-label>
+           <mat-form-field appearance="outline" class="w-100">
+            <input matInput formControlName="policytimestart" type="time">
+           </mat-form-field>
+       </div>
+       <div class="col-6">
+           <mat-label>Policy End Time</mat-label>
+           <mat-form-field appearance="outline" class="w-100">
+            <input matInput formControlName="policytimeend" type="time">
+           </mat-form-field>
+       </div>
+   </div>
+   <div class="row justify-content-center">
+       <div class="col-6">
+           <mat-label>Transaction Type<b class="asterisk">*</b></mat-label>
+           <mat-form-field appearance="outline" class="w-100">
+            <input matInput formControlName="transactiontype"
+            placeholder="">
+           </mat-form-field>
+       </div>
+       <div class="col-6">
+           <mat-label>Customer Name<b class="asterisk">*</b></mat-label>
+           <mat-form-field appearance="outline" class="w-100">
+            <input matInput formControlName="customername" placeholder="">
+           </mat-form-field>
+       </div>
+   </div>
+    </div>
+
+    <div *ngIf="isElement === 2">
+
+      <div class="row">
+        <h1>Business Details</h1>
+        <div class="col-6" [formGroup]="page2formgroup">
+            <mat-label>Policy Start Time</mat-label>
+            <mat-form-field appearance="outline" class="w-100">
+             <input matInput formControlName="policystart">
+            </mat-form-field>
+        </div>
+        <div class="col-6">
+            <mat-label>Policy End Time</mat-label>
+            <mat-form-field appearance="outline" class="w-100">
+             <input matInput formControlName="policyend">
+            </mat-form-field>
+        </div>
+    </div>
+    
+    </div>
+    
+    <div *ngIf="isElement === 3">
+        <div class="col-12">
+        <mat-card>
+           <h1>Workers Details</h1>
+          <div class="row">
+        <h3 class="simha"> Basis Type</h3>
+             <mat-radio-group >
+            <mat-radio-button value="named" class="simha">Named</mat-radio-button>
+            <mat-radio-button value="unnamed" class="lion">Un-named</mat-radio-button>
+          </mat-radio-group>
+        </div>
+                   <div class="row mt-3">
+                    <div class="col-6">
+                    <label for="" class="simha">Type of Industry<b class="asterisk">*</b></label>
+                    <mat-expansion-panel class=" outline mt-3">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          IT
+                        </mat-panel-title>
+                        
+                      </mat-expansion-panel-header>
+                      <p>NON IT</p>
+                    </mat-expansion-panel>
+                </div>
+                <div class="col-6">
+                    <label for="" class="simha">Nature of Work<b class="asterisk">*</b></label>
+                    <mat-expansion-panel class=" outline mt-3">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          test
+                        </mat-panel-title>
+                        
+                      </mat-expansion-panel-header>
+                      <p>No test</p>
+                    </mat-expansion-panel>
+                </div>
+
+                   </div>
+                  
+                                            
+                   <div class="row mt-3">
+                                   <div class="col-12">
+                                       <mat-expansion-panel >
+                                           <mat-expansion-panel-header class=" style">
+                                                   <div class="col-1 text ">Type of Employeement</div>
+                                                   <div class="col-1 text ">Type of Workers</div>
+                                                   <div class="col-3 text "> Trade Description</div>
+                                                   <div class="col-2 text ">Trade Sub Categoery</div>
+                                                   <div class="col-1 text ">Classsification number</div>
+                                                   <div class="col-1 text ">number of Worker Employees</div>
+                                                   <div class="col-1 text ">MOnthly Wages per Workers</div>
+                                                   <div class="col-1 text">add</div>
+                                                  <div class="col-1 text">delete</div>
+                                           </mat-expansion-panel-header>
+                                              <div class="row">
+                                           <div class="col-1 ">
+                                               <mat-form-field appearance="outline" class="w-100 height">
+                                                   <mat-label class="style1" >Employee worker </mat-label>
+                                                   <mat-select>
+                                                     <mat-option >first</mat-option>
+                                                     <mat-option >Second option</mat-option>
+                                                   </mat-select>
+                                                 </mat-form-field>
+                                           </div>
+                                           <div class="col-1 ">
+                                               <mat-form-field appearance="outline" class="w-100 height">
+                                                   <mat-label class="style1">Unskilled</mat-label>
+                                                   <mat-select>
+                                                     <mat-option >Unskilled</mat-option>
+                                                     <mat-option >Skilled</mat-option>
+                                                   </mat-select>
+                                                 </mat-form-field>
+                                           </div>
+                                           <div class="col-3 ">
+                                               <mat-form-field appearance="outline" class="w-100 height">
+                                                   <mat-label class="style1">All Types of Stocks Of Row Material</mat-label>
+                                                   <mat-select>
+                                                     <mat-option >All Types of Stocks Of Row Material</mat-option>
+                                                     <mat-option >Second option</mat-option>
+                                                   </mat-select>
+                                                 </mat-form-field>
+                                           </div>
+                                           <div class="col-2 ">
+                                               <mat-form-field appearance="outline" class="w-100 height">
+                                                   <mat-label class="style1">AGRO (CH NO AGRO2)</mat-label>
+                                                   <mat-select>
+                                                     <mat-option >AGRO (CH NO AGRO2)</mat-option>
+                                                     <mat-option >Second option</mat-option>
+                                                   </mat-select>
+                                                 </mat-form-field>
+                                           </div>
+                                           <div class="col-1 ">
+                                               <mat-form-field appearance="outline" class="w-100 height">
+                                                 <input matInput placeholder="">
+                                               </mat-form-field>
+                                           </div>
+                                           <div class="col-1 ">
+                                               <mat-form-field appearance="outline" class="w-100 height">
+                                                   <input matInput placeholder="">
+                                                 </mat-form-field>
+                                           </div>
+                                           <div class="col-1 ">
+                                               <mat-form-field appearance="outline" class="w-100 height">
+                                                   <input matInput placeholder="">
+                                                 </mat-form-field>
+                                           </div>
+                                           <div class="col-1"><mat-icon>add</mat-icon> </div>
+                                           <div class="col-1"> <mat-icon>delete</mat-icon></div>
+                                       </div>
+                                       </mat-expansion-panel>
+                                   </div>
+                               </div>          
+                               
+                               <div class="row mt-3">
+                                      <mat-checkbox>Ocupational Disease Cover </mat-checkbox>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-6">
+                                      <mat-checkbox>Extension For Medical Expences</mat-checkbox>
+                                  </div>
+                                  <div class="col-6">
+                                      <mat-label>Medical Expences Limit Per Person<b class="asterisk">*</b></mat-label>
+                                      <mat-form-field appearance="outline" class="w-100 height">
+                                          <mat-label class="style1">Medical expences coverd upto RS 25000</mat-label>
+                                          <mat-select>
+                                            <mat-option >25000 limit</mat-option>
+                                            <mat-option >less than 25000</mat-option>
+                                          </mat-select>
+                                        </mat-form-field>
+                                  </div>
+                                  </div>
+                               
+                                  <div class="row mt-3">
+                                         <mat-checkbox>Extension For Contractor &Sub Contractor Employess</mat-checkbox>
+                                     </div>
+                                     <div class="row mt-3">
+                                         <div class="col-6">
+                                             <mat-label>Discount<b class="asterisk">*</b></mat-label>
+                                             <mat-form-field appearance="outline" class="w-100 height">
+                                                 <input matInput placeholder="">
+                                               </mat-form-field>
+                                         </div>
+                                         <div class="col-6 mt-3">
+                                             <mat-checkbox>Terrorism<b class="asterisk">*</b></mat-checkbox>
+                                         </div>
+                                     </div>
+                                     <div class="row mt-3">
+                                                 <div class="col-6">
+                                                     <mat-label>Loading</mat-label>
+                                                     <mat-form-field appearance="outline" class="w-100 height">
+                                                         <input matInput placeholder="">
+                                                       </mat-form-field>
+                                                 </div>
+                                             </div>
+                                             
+        </mat-card>
+    </div>
+    </div>
+
+    <div *ngIf="isElement === 4">
+ <mat-card >
+  <div class="row">
+    <h2>
+                  Exclusion
+    </h2>
+  </div>
+  <div class="row ">
+    <table>
+    <tr>
+      <th>SR Number</th>
+      <th>List Name</th>
+     <th>Status</th>
+     <th>Delete</th>
+    </tr>
+
+    <tr>
+      <td class="number1">1</td>
+       <td><input  class="listname " type="text"></td>
+       <td><input type="checkbox" ></td>
+      <td> <mat-icon >delete</mat-icon></td>
+    </tr>
+    <tr>
+      <td>2</td>
+       <td><input class="listname" type="text"></td>
+       <td><input type="checkbox"></td>
+      <td> <mat-icon>delete</mat-icon></td>
+    </tr>
+    <tr>
+      <td>3</td>
+       <td><input class="listname" type="text"></td>
+       <td><input type="checkbox"></td>
+      <td> <mat-icon>delete</mat-icon></td>
+    </tr>
+    <tr>
+      <td>4</td>
+       <td><input class="listname" type="text"></td>
+       <td><input type="checkbox"></td>
+      <td> <mat-icon>delete</mat-icon></td>
+    </tr>
+    <tr>
+      <td>5</td>
+       <td><input class="listname"  type="text"></td>
+       <td><input type="checkbox"></td>
+      <td> <mat-icon>delete</mat-icon></td>
+    
+    </tr>
+ </table>
+  </div>
+ 
+</mat-card>
+
+
+    </div>
+
+    <div *ngIf="isElement === 5">
+      
+<div class="row">
+      <div class="col-6">
+        <mat-label>Enter student marks</mat-label>
+        <mat-form-field appearance="outline" class="w-100" >
+         <input matInput [(ngModel)]="grades" >
+     
+        </mat-form-field> </div></div>
+        <div class="row">
+          <div class="col-2">
+          <button mat-raised-button color="primary" (click)="calculate()">CLICK FOR GRADE</button>
+            </div>
+           <div class=" graade mt-3">Grade: {{grades}} </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    //code for data between dates?
+
+    
+
+
+
+   

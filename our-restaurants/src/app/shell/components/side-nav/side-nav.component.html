@@ -1,0 +1,97 @@
++<div
+  class="sidenav_container"
+  (mouseenter)="onSinenavToggle()"
+  (mouseleave)="onSinenavToggle()"
+  [@onSideNavChange]="(sideNavState || mobileQuery.matches) ? 'open' : 'close'"
+>
+  <!-- <div fxLayout="column" fxLayoutGap="10px" style="height: 100%;">
+    <div>
+      <mat-nav-list>
+        <ng-container *ngFor="let page of pages">
+          <a
+            mat-list-item
+            *ngIf="page.display"
+            (click)="showMenu(page.name)"
+            [routerLink]="[page.parentLink, page.link]"
+            [routerLinkActive]="'active'"
+          >
+            <mat-icon style="padding-right: 5px;">{{page?.icon}}</mat-icon>
+            <span class="name-styles" [@animateText]="(linkText || mobileQuery.matches) ? 'show' : 'hide'"
+              >{{ page?.name }}</span
+            >
+          </a>
+        </ng-container>
+      </mat-nav-list>
+    </div>
+  </div> -->
+  <div fxLayout="column" fxLayoutGap="10px" style="height: 100%;">
+    <div>
+      <mat-nav-list>
+        <ng-container *ngFor="let parent of newSideNav">
+          <a
+            mat-list-item
+            *ngIf="parent.display && parent.routeName"
+            [routerLink]="[parent.parentRouteName, parent.routeName]"
+            [queryParamsHandling]="'preserve'"
+            [routerLinkActive]="'active'"
+            (click)="displayChildMenu(parent.name, parent.routeName)"
+          >
+            <mat-icon style="padding-right: 5px;"> {{parent?.icon}} </mat-icon>
+            <span
+              class="name-styles w-100"
+              [@animateText]="(linkText || mobileQuery.matches) ? 'show' : 'hide'"
+              >{{ parent?.name }}
+              <mat-icon class="pe-1 align-middle float-end" *ngIf="parent.child.length">
+                {{ selectedMainMenu === parent.name ? 'arrow_drop_down' :
+                'arrow_right'}}
+              </mat-icon>
+            </span>
+          </a>
+          <a
+            mat-list-item
+            *ngIf="parent.display && !parent.routeName"
+            (click)="displayChildMenu(parent.name, parent.routeName)"
+          >
+            <mat-icon style="padding-right: 5px;"> {{parent?.icon}} </mat-icon>
+            <span
+              class="name-styles w-100"
+              [@animateText]="(linkText || mobileQuery.matches) ? 'show' : 'hide'"
+              >{{ parent?.name }}
+              <mat-icon class="pe-1 align-middle float-end" *ngIf="parent.child.length">
+                {{ selectedMainMenu === parent.name ? 'arrow_drop_down' :
+                'arrow_right'}}
+              </mat-icon>
+            </span>
+          </a>
+          <ng-container *ngIf="selectedMainMenu === parent.name">
+            <ng-container *ngFor="let child of parent.child">
+              <a
+                mat-list-item
+                *ngIf="child.display"
+                (click)="showMenu(child.name, true)"
+                [routerLink]="[child.parentRouteName, child.routeName]"
+                [queryParamsHandling]="'preserve'"
+                [routerLinkActive]="'active'"
+                class="ps-3 "
+              >
+                <!-- <mat-icon style="padding-right: 5px;">{{child?.icon}}</mat-icon> -->
+                <span
+                  class="child-name-styles "
+                  [@animateText]="(linkText || mobileQuery.matches) ? 'show' : 'hide'"
+                  >{{ child?.name }}</span
+                >
+              </a>
+            </ng-container>
+          </ng-container>
+        </ng-container>
+      </mat-nav-list>
+    </div>
+  </div>
+
+  <!-- <span class="spacer"></span>
+  <div fxLayout="row" fxLayoutAlign="end center" style="padding: 0px 10px;">
+    <button mat-icon-button (click)="onSinenavToggle()">
+      <mat-icon> {{ sideNavState ? 'arrow_left' : 'arrow_right'}} </mat-icon>
+    </button>
+  </div> -->
+</div>

@@ -1,0 +1,25 @@
+<div>
+  <app-header-nav
+    [sidenav]="leftSidenav"
+    [activeMenuName]="activeMenuName"
+  ></app-header-nav>
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav
+      #leftSidenav
+      [mode]="mobileQuery.matches ? 'over' : 'side'"
+      [opened]="mobileQuery.matches ? false : true"
+    >
+      <!-- follow header nav [sidenav]="leftSidenav" logic -->
+      <app-side-nav
+        [sidenav]="leftSidenav"
+        (selectedMenu)="switchContentAfterMenuSelected($event)"
+      ></app-side-nav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="main_content">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  <!-- <app-header-nav></app-header-nav> -->
+</div>
