@@ -7,13 +7,15 @@ import { MaterialModule } from 'src/app/@shared/material/material.module';
 import { EmployeeAddComponent } from './components/employee-add/employee-add.component';
 import { EditEmployeeComponent } from './components/edit-employee/edit-employee.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NumbersComponent } from './components/numbers/numbers.component';
 
 
 @NgModule({
   declarations: [
     EmlpoyeeMainViewComponent,
     EmployeeAddComponent,
-    EditEmployeeComponent
+    EditEmployeeComponent,
+    NumbersComponent
   ],
   imports: [
     CommonModule,
